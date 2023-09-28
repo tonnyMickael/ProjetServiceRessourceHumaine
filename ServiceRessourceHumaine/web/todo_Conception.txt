@@ -1,0 +1,33 @@
+projet web application for SRH:
+    tache:
+    .collecte de besoin de chaque departement
+        .interface standard pour la recolte des besoin base sur 
+            .le volume de tache
+            .le volume d'heure
+            .homme jour par heure
+            -interface formulaire de demande:
+		.choix du departement (type texte)(menu deroulant) => a ne pas faire pour l'instant
+		.poste vacant(type texte)=> mettre en menu deroulant a venir 
+		.justification du besoin(type texte)
+		.duree estimee(type number)
+		.competence requise(type texte)
+		.diplome requise (menu deroulant) => saisir dans le code directement avec values predefinis pour analyse 
+		.experience requise (menu deroulant) => saisir dans le code directement avec predefinir pour analyse
+            -metier 
+                .servlet de preparation de la page formulaire 
+                    (NAME: ServletInitFormulaire FONCTION: preparer les information necessaire au formulaire)
+                .sevlet de stockage des besoin selon les departement
+                    (NAME: ServletBesoinDept FONCTION: envoyer les informations dans la base et les trie pour generer annonce)
+            -base
+                .table departement
+                .table postParDepartement
+                .table besoin
+    .generer les annonces de chaque departement
+        .interface liste des annonces generer
+            _liste des titre d'annonce par les departement
+        .interface detail de chaque annonce
+            _pdf des annonces (java)
+    .formulaire de collecte du cv
+    .analyse des cv recu avec teste de macth avec les critaires donnee par les services
+    .generer les questionnaire des services
+    .programmer le calendrier des entretiens
